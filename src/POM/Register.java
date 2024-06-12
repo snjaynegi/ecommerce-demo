@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class Register {
 
@@ -51,7 +52,7 @@ public class Register {
 	//Your Password
 	
 	@FindBy(id="Password")
-	WebElement Password;
+	WebElement password;
 	
 	@FindBy(id="ConfirmPassword")
 	WebElement ConfirmPassword;
@@ -60,4 +61,32 @@ public class Register {
 	
 	@FindBy(id="register-button")
 	WebElement registerButton;
+	
+	public void register(String fname, String LName, String Day, String Month, String Year, String Email, String Company_name, String Password, String confirmpassword)
+	{
+		male.click();
+		FirstName.sendKeys(fname);
+		LastName.sendKeys(LName);
+		
+		Select select_Day = new Select(day);
+		select_Day.selectByVisibleText(Day);
+		
+		Select select_month = new Select(month);
+		select_month.selectByVisibleText(Month);
+		
+		Select seelct_year = new Select(year);
+		seelct_year.selectByVisibleText(Year);
+		
+		email.sendKeys(Email);
+		
+		Company.sendKeys(Company_name);
+		
+		Newsletter.click();
+		
+		password.sendKeys(Password);
+		
+		ConfirmPassword.sendKeys(confirmpassword);
+		
+		registerButton.click();
+	}
 }
