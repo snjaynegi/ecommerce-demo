@@ -12,6 +12,8 @@ public class Register {
 		PageFactory.initElements(driver, this);
 	}
 	
+	//Your Personal Details
+	
 	@FindBy(xpath="//input[@value='M']")
 	WebElement male;
 	
@@ -23,4 +25,39 @@ public class Register {
 	
 	@FindBy(id="LastName")
 	WebElement LastName;
+	
+	@FindBy(xpath="//select[@name='DateOfBirthDay']")
+	WebElement day;
+	
+	@FindBy(xpath="//select[@name='DateOfBirthMonth']")
+	WebElement month;
+	
+	@FindBy(xpath="//select[@name='DateOfBirthYear']")
+	WebElement year;
+	
+	@FindBy(id="Email")
+	WebElement email;
+	
+	//Company Details
+	
+	@FindBy(id="Company")
+	WebElement Company;
+	
+	//Options
+	
+	@FindBy(id="Newsletter")
+	WebElement Newsletter;
+	
+	//Your Password
+	
+	@FindBy(id="Password")
+	WebElement Password;
+	
+	@FindBy(id="ConfirmPassword")
+	WebElement ConfirmPassword;
+	
+	//Register Button
+	
+	@FindBy(id="register-button")
+	WebElement registerButton;
 }
