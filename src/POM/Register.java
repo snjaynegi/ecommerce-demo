@@ -62,9 +62,23 @@ public class Register {
 	@FindBy(id="register-button")
 	WebElement registerButton;
 	
-	public void register(String fname, String LName, String Day, String Month, String Year, String Email, String Company_name, String Password, String confirmpassword)
+	public void Mgender()
 	{
 		male.click();
+	}
+	
+	public void Fgender()
+	{
+		female.click();
+	}
+	
+	public void ClickNewsletter()
+	{
+		Newsletter.click();
+	}
+	
+	public void register(String fname, String LName, String Day, String Month, String Year, String Email, String Company_name, String Password, String confirmpassword)
+	{
 		FirstName.sendKeys(fname);
 		LastName.sendKeys(LName);
 		
@@ -81,12 +95,14 @@ public class Register {
 		
 		Company.sendKeys(Company_name);
 		
-		Newsletter.click();
-		
 		password.sendKeys(Password);
 		
 		ConfirmPassword.sendKeys(confirmpassword);
 		
+	}
+	
+	public void clickRegisterButton()
+	{
 		registerButton.click();
 	}
 }

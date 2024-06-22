@@ -25,7 +25,7 @@ public class Homepage {
 	WebElement ShoppingCart;
 	
 	@FindBy(id="small-searchterms")
-	WebElement search;
+	WebElement Search;
 	
 	@FindBy(xpath="//button[text()='Search']")
 	WebElement SearchButton;
@@ -68,9 +68,9 @@ public class Homepage {
 		ShoppingCart.click();
 	}
 	
-	public void Search(String searchItem)
+	public void SearchAction(String searchItem)
 	{
-		search.sendKeys(searchItem);
+		Search.sendKeys(searchItem);
 		SearchButton.click();
 	}
 	

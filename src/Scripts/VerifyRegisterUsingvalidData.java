@@ -1,10 +1,15 @@
 package Scripts;
 
+import java.io.File;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.google.common.io.Files;
 
 import POM.Register;
 
@@ -28,6 +33,15 @@ public class VerifyRegisterUsingvalidData {
 		if(driver.getPageSource().contains("Your registration completed"))
 		{
 			System.out.println("Account created");
+			try {
+				TakesScreenshot sc = (TakesScreenshot) driver;
+				File source = sc.getScreenshotAs(OutputType.FILE);
+				File destination = new File("./search/search.png");
+				Files.copy(source, destination);
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		else
 		{

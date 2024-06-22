@@ -22,6 +22,7 @@ public class VerifyDunplicateuser {
 		Register register = new Register(driver);
 		register.Mgender();
 		register.register("rajeev", "sharma", "20", "April", "2000", "rajeevsharma@gmail.com", "Abc", "Abc@123", "Abc@123");
+		//TO uncheck the Newsletter
 		register.ClickNewsletter();
 		register.clickRegisterButton();
 		

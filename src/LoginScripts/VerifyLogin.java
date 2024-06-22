@@ -4,7 +4,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import POM.login;
 
 public class VerifyLogin {
@@ -33,6 +32,6 @@ public class VerifyLogin {
 		}
 		
 		Thread.sleep(2000);
-		driver.quit();
+		//driver.quit();
 		}
 	}
